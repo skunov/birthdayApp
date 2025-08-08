@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    @Query private var friends: [Friend]
+    @Query(sort: \Friend.birthday) private var friends: [Friend]
     @Environment(\.modelContext) private var context
     
     /*= [Friend(name: "Elton Lin", birthday: .now), Friend(name: "Jenny Court", birthday: Date(timeIntervalSince1970: 0))]*/
